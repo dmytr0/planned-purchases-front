@@ -7,8 +7,13 @@ export default Backbone.Model.extend({
         name: "undefined",
         description: "",
         category: "default",
-        url: "urls",
         priority: 3
+    },
+    parse:function (data) {
+        this.attributes.urls = data.urls.split(";");
+        delete data.urls;
+        console.log(this);
+        return data;
     }
 
 });

@@ -8,7 +8,6 @@ export default Backbone.View.extend({
     initialize() {
         this.listenTo(this.model, 'change', this.render);
     },
-
     className: 'purchaseItem',
 
     render(){

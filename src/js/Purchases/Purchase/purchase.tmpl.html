@@ -6,7 +6,11 @@
     <img class="ppImage ppimg" src="<%= image %>">
     <p class="ppDescTitle">Description:</p>
     <p class="ppDesc"><%= description %></p>
-    <p class="ppUrls"><a href="<%= urls %>" target="_blank"><%= urls %></a></p>
+    <p class="ppUrls">
+        <%  for(var url in urls) { %>
+            <a href= <%= urls[url] %> target="_blank"><%= urls[url] %></a>
+        <% } %>
+    </p>
     <p class="ppPriority">Priotity: <%= priority %></p>
     <p class="ppCategory">Category: <%= category %></p>
 

@@ -10,5 +10,31 @@
 
       <div id="app"></div>
 
+      <div class="ppdialog" >
+            <input id="id" type="hidden">
+            <p><label for="ename">Name: </label><input id="ename" type="text" placeholder="Enter purchase name"></p>
+            <p><label for="eamount">Amount: </label><input id="eamount" type="text" placeholder="Enter an amount">
+            <select name="ecurrency" id="ecurrency">
+                  <option selected value="₴">₴</option>
+                  <option value="$">$</option>
+                  <option value="€">€</option>
+            </select></p>
+            <p><label for="eimage">Image: </label><input id="eimage" type="text" placeholder="Enter image url"></p>
+            <p><label>Link: </label><input class="eurl" type="text" placeholder="Enter a link"></p>
+            <p><label for="edescription">Description: </label><input id="edescription" type="text" placeholder="Enter a description"></p>
+            <p><label for="ecategory">Category: </label><input id="ecategory" type="text" placeholder="Enter a category"></p>
+            <p><label for="epriority">Priority: </label><select name="priority" id="epriority">
+                  <option value="1">Lowest</option>
+                  <option value="2">Low</option>
+                  <option selected value="3">Middle</option>
+                  <option value="4">Hi</option>
+                  <option value="5">Highest</option>
+            </select></p>
+
+            <button>Save</button>
+            <button>Cancel</button>
+
+      </div>
+      <!--style="display: none"-->
 </body>
 </html>
