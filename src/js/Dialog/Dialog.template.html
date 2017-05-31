@@ -1,0 +1,31 @@
+<p><label for="ename">Name: </label><input id="ename" type="text" placeholder="Enter purchase name" value="<%= name %>"></p>
+<p><label for="eamount">Amount: </label><input id="eamount" type="text" placeholder="Enter an amount"  value="<%= amount %>">
+    <select name="ecurrency" id="ecurrency">
+        <option disabled selected value="<%= currency %>"><%= currency %></option>
+        <option value="₴">₴</option>
+        <option value="$">$</option>
+        <option value="€">€</option>
+    </select></p>
+<p><label for="eimage">Image: </label><input id="eimage" type="text" placeholder="Enter image url"  value="<%= image %>"></p>
+    <%  for(var url in urlsarr) { %>
+        <p><label>Link: </label><input class="eurl" type="text" placeholder="Enter a link"   value="<%= urlsarr[url] %>">
+            <img class="copyLink dialogicon" src="<%= addicon %>"> <img class="trashLink dialogicon" src="<%= trashicon %>"></p>
+    <%}%>
+    <% if(urlsarr.length == 0){ %>
+        <p><label>Link: </label><input class="eurl" type="text" placeholder="Enter a link" >
+        <img class="copyLink dialogicon" src="<%= addicon %>"> <img class="trashLink dialogicon" src="<%= trashicon %>"></p>
+    <%}%>
+
+<p><label for="edescription">Description: </label><input id="edescription" type="text" placeholder="Enter a description"   value="<%= description %>"></p>
+<p><label for="ecategory">Category: </label><input id="ecategory" type="text" placeholder="Enter a category"   value="<%= category %>"></p>
+<p><label for="epriority">Priority: </label><select name="priority" id="epriority" >
+    <option disabled selected value="<%= priority %>"><%= priority %></option>
+    <option value="1">Lowest</option>
+    <option value="2">Low</option>
+    <option value="3">Middle</option>
+    <option value="4">Hi</option>
+    <option value="5">Highest</option>
+</select></p>
+
+<button class="saveNewPP">Save</button>
+<button class="cancelDialog">Cancel</button>

@@ -1,19 +1,34 @@
 export default Backbone.Model.extend({
     idAttribute: "id",
+    urlRoot:"http://localhost:2505/purchase/",
+
     defaults: {
         amount: 0.00,
         currency:"₴",
-        image: "",
+        image: "http://volzlo.com/images/prod/empty.png",
         name: "undefined",
-        description: "",
+        description: "No description",
         category: "default",
-        priority: 3
+        priority: 3,
+        urls: "" ,
+        urlsarr: [""]
     },
     parse:function (data) {
-        this.attributes.urls = data.urls.split(";");
-        delete data.urls;
-        console.log(this);
+        if(data.urls != null) {
+            data.urlsarr = _.compact(data.urls.split(";"));
+        }
         return data;
     }
 
 });
+
+
+
+
+
+
+
+
+
+
+

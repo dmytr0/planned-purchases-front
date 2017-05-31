@@ -1,14 +1,18 @@
 <img class="ppImagePrev ppimg" src="<%= image %>">
 <h2 class="ppName"><%= name %></h2>
+
+<p class="ppaction"><img class="ppDelete" src="<%= delIcon %>"></p>
+<p class="ppaction"><img class="ppEdit" src="<%= edIcon %>"></p>
 <p class="ppAmount"><%= amount %><span> <%= currency %></span></p>
+
 <div class="ppDetails">
 
     <img class="ppImage ppimg" src="<%= image %>">
     <p class="ppDescTitle">Description:</p>
     <p class="ppDesc"><%= description %></p>
     <p class="ppUrls">
-        <%  for(var url in urls) { %>
-            <a href= <%= urls[url] %> target="_blank"><%= urls[url] %></a>
+        <%  for(var url in urlsarr) { %>
+                    <a href= <%= urls[url] %> target="_blank"><%= urlsarr[url] %></a><br>
         <% } %>
     </p>
     <p class="ppPriority">Priotity: <%= priority %></p>
